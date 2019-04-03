@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'metal';
+    src: url('../fonts/metal_blackletter_v4-webfont.woff2') format('woff2'),
+         url('../fonts/metal_blackletter_v4-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+//Fonts
+$display : 'metal';
+$body: 'Source Sans Pro';
+
+
+//Colors
+$pink : #F433AB;
+$dk-red: #86060A;
+$dk: #15011D;
+$dk-blue: #190061;
+$ultramarine: #3500d3;
+$orchid: #6931A9;
+$d-indigo: #130631;
+$offwhite: #f1e6eb;

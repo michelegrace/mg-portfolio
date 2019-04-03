@@ -1,11 +1,13 @@
 'use strict';
  
 var gulp = require('gulp');
+var series = require('gulp').series;
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
+var imagemin = require('gulp-imagemin');
 var browsersync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
@@ -24,25 +26,30 @@ function browserSyncReload(done) {
 }
 
 function css(){
-    return gulp
-        .src("./assets/styles/*.scss")
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(concat('main.css'))
-        .pipe(autoprefixer('last 2 versions'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest("./public/css/"))
-        .pipe(browsersync.stream());
-}
-   
-  gulp.task('sass:watch', function () {
-    gulp.watch('/assets/styles/*.scss', ['sass']);
-  });
+  return gulp
+    .src("./assets/styles/*.scss")
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(concat('main.css'))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./public/css/"))
+    .pipe(browsersync.stream());
+};
 
-  function defaultTask(cb) {
-    cb();
+function imgMin() {
+  return gulp
+    .src('./assets/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./public/images'))
+  };
+
+  function fonts(){
+    return gulp
+      .src('./assets/fonts/*')
+      .pipe(gulp.dest('./public/fonts'));
   }
 
 exports.default = css;
-exports.build = css;
+exports.build = series(imgMin, fonts);

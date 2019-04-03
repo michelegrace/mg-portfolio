@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/main.css">
+    <title>Michele G Smolensky | Designer & Web Developer</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="logo" href="/">
+                    <span class="firstname">michele</span>
+                    <span class="lastname">smolensky</span>
+                 </a>
+                  
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+                  
+            <div id="mainNav" class="navbar-menu">
+                <a class="navbar-item">home</a>
+                <a href="/" class="navbar-item">about</a>      
+                <a class="navbar-item">work</a>
+                <a href="" class="navbar-item">blog</a>
+            </div>
+    </nav>
+    </header>
+    <section class="about">
+        <div class="columns">
+            <div class="column is-two-fifths  is-gapless">
+                <div class="portrait"></div>
+            </div>
+            <div class="column is-three-fifths about-cntnt">
+                <div class="columns">
+                    <div class="column is-two-thirds"> 
+                        <h2>hello!</h2>
+                        <p class="about-intro">My name is Michele Smolensky and I <span id="message"></span>.</p>
+                        <p>As both a designer and developer, I love that I have the tools to solve problems and implement solutions. I believe that products can be simple, but they don't have to be boring.</p>
+                        <p>I'm always on the hunt for what's new and changing in the world of design and code. The plethora of things to 
+                            learn and deep dive into is part of what drew me to tech in the first place. Currently, I am learning React, experimenting 
+                            with Adobe XD and prototyping an app for foodies. I blog about what I'm learning and doing here.</p>      
+                        <p>When I'm not glued to a screen I like practicing aerial arts, eating good food, rolling for initiative.   </p>
+                                    
+                        <p>I am currently available for freelance work and I'm always interested in participating in new, exciting projects. 
+                            Feel free to get in touch.</p>
+                    </div>
+                    <div class="column is-one-third">
+                            <div class="experience">
+                                <h2>Skills</h2>
+                                <ul class="skills">
+                                    <li>HTML5 (Pug)</li>
+                                    <li>CSS (SCSS)</li>
+                                    <li>JS (Vanilla, jQuery, Node & Express)</li>
+                                    <li>CMS: Wordpress, Drupal, MODX & Mura</li>
+                                    <li>Bootstrap 3 & 4, Bulma</li>
+                                    <li>PHP</li>
+                                    <li>Photoshop, Illustrator, Sketch & Zeplin</li>
+                                </ul>
+                                    <ul class="social-media">
+                                        <li><a href="">/linkedin</a></li>
+                                        <li><a href="">/twitter</a></li>
+                                        <li><a href="">/codepen</a></li>
+                                        <li><a href="">/github</a></li>
+                                    </ul>
+                                    <a href="resume">resume</a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    var hamburger = document.querySelector('.burger');
+    var menu = document.querySelector('#mainNav');
+
+    hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    });
+    </script>
+
+    <script>
+        var messageHTML = document.querySelector('#message');
+        var messages = ['am currently design manager and front-end developer at Practice Cafe in Austin, Texas', 'drink a lot of coffee, and its not a problem', 'have way too many bookmarked articles to read on dev.to'];
+
+        for (var i = 0; i < messages.length; i++) {
+            function looping(i, t) {
+                setTimeout(function() {
+             messageHTML.innerHTML = messages[i];
+         }, t* i);
+     };
+     looping(i, 5000);
+ }
+
+    </script>
+</body>
+</html>

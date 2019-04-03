@@ -1,0 +1,114 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $body;
+    position: relative;
+    background: $d-indigo;
+}
+
+header {
+    width: 100%;
+}
+
+.is-absolute {
+    position: absolute;
+}
+
+.is_relative {
+    position: relative;
+}
+
+.middle-content {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    width: 20%;
+}
+
+.center-block-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        @extend h3;
+        letter-spacing: 0.03em;
+    }
+}
+
+.block {
+    position: relative;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    background-blend-mode: multiply;
+    &:hover {
+        a {
+            transition: 1s all ease-in-out;
+            letter-spacing: 0.5em;
+            opacity: .6;
+        }
+    }
+}
+
+.design {
+    background-image: url('../images/design-block.jpg'), linear-gradient(23deg, $dk-blue, $ultramarine);
+}
+
+.dev {
+    background-image: url('../images/dev-block.jpg'), linear-gradient(23deg, $dk-blue, $ultramarine);
+}
+
+.experience {
+    background: $dk;
+    padding: 20px 30px;
+}
+
+.about {
+    position: relative;
+    padding: 75px 0;
+    .about-cntnt {
+        position: absolute;
+        left: 30%;
+        padding: 7% 0 0;
+    }
+}
+
+.about-cntnt {
+    p {
+        padding: 0 0 0 40px;
+        font-size: 1rem;
+        line-height: 1.75em;
+        letter-spacing: 0.01em;
+        color: $offwhite;
+        margin-top: 32px;
+    }
+}
+
+.portrait {
+    background: url(../images/option-3.jpg)no-repeat, linear-gradient(23deg, $dk-blue, $ultramarine);
+    display: block;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: right;
+    background-blend-mode: multiply;
+}
+
+.case-study {
+    padding: 75px;
+}
+
+.case-study-info {
+    margin-top: 100px;
+    p {
+        color: $offwhite;
+    }
+}
+
+.project-client {
+    font-family: $body;
+}
