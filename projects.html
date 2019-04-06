@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/main.css">
+    <title>Michele G Smolensky | Designer & Web Developer</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="logo" href="/">
+                    <span class="firstname">michele</span>
+                    <span class="lastname">smolensky</span>
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="mainNav">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="mainNav" class="navbar-menu">
+                <a class="navbar-item">home</a>
+                <a href="/" class="navbar-item">about</a>
+                <a class="navbar-item">work</a>
+                <a href="" class="navbar-item">blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        var hamburger = document.querySelector('.burger');
+        var menu = document.querySelector('#mainNav');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+        });
+    </script>
+</body>
+
+</html>
