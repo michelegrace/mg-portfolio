@@ -8,14 +8,15 @@
     left: 58px;
     transform: rotate(-7deg);
     letter-spacing:0.02em;
+    transition: 1s all ease-in-out;
     span {
         display: block;
         line-height: 1.1em;
     }
     &:focus, &:hover {
         color: transparent;
-        transition: 2s color ease;
-        -webkit-text-stroke-color: $dk-red;
+        transition: 1s all ease-in-out;
+        -webkit-text-stroke-color: $neon;
     }
 }
 
@@ -26,7 +27,7 @@ h1 {
     letter-spacing: 0.2px;
     color: $pink;
     &.mega {
-        font-size: 3.375em;
+        font-size: 8.375em;;
     }
 }
 
@@ -51,9 +52,9 @@ h3, .h3{
 }
 
 .intro-text {
-    font-size: 1.375em;
+    font-size: 1.05em;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.09em;
   text-align: center;
   color: $offwhite;
 }

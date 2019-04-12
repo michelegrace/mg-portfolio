@@ -12,18 +12,21 @@ var browsersync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
 
-
-function browserSync(done) {
-    browsersync.init({
-        proxy: 'localhost:3000'
-    });
-    done();
+function reload() {
+  browsersync.reload();
 }
 
-function browserSyncReload(done) {
-    browsersync.reload();
-    done();
-}
+function sync() {
+  browsersync.init({
+      server: {
+          baseDir: "./"
+      }
+  });
+  gulp.watch("./assets/styles/**/*.scss", css);
+  gulp.watch('./assets/js/*.js', js);
+  gulp.watch("index.html").on('change', reload);
+};
+
 
 function css(){
   return gulp
@@ -38,18 +41,39 @@ function css(){
     .pipe(browsersync.stream());
 };
 
+function js(){
+  return gulp
+  .src('./assets/js/*.js')
+  .pipe(plumber())
+  .pipe(concat('all.js'))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./public/js'))
+  .pipe(browsersync.stream());
+}
+
+function thirdParty(){
+  return gulp
+  .src('./assets/third_party/animejs/lib/anime.min.js')
+  .pipe(plumber())
+  .pipe(gulp.dest('./public/third_party'))
+  .pipe(browsersync.stream());
+}
+
 function imgMin() {
   return gulp
     .src('./assets/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./public/images'))
+    .pipe(browsersync.stream());
   };
 
   function fonts(){
     return gulp
       .src('./assets/fonts/*')
-      .pipe(gulp.dest('./public/fonts'));
+      .pipe(gulp.dest('./public/fonts'))
+      .pipe(browsersync.stream());
   }
 
 exports.default = css;
-exports.build = series(imgMin, fonts);
+exports.watch = gulp.parallel(css, js, sync);
+exports.build = series(imgMin, fonts, thirdParty);

@@ -9,9 +9,10 @@
         padding: 0 3rem;
         color: $offwhite;
         font-weight: bold;
-        transition: 1s color ease-in;
+        transition: .5s color ease-in;
         &:focus, &:hover {
             color: $pink;
+            background: transparent;
         }
     }
 }

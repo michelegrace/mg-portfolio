@@ -1,5 +1,5 @@
 {
-  "name": "portfolio2019",
+  "name": "portfolio 2019",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,17 +9,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
     "node-sass": "^4.11.0"
   },
   "dependencies": {
-    "bulma": "^0.7.4"
+    "animejs": "^3.0.1",
+    "browser-sync": "^2.26.3",
+    "bulma": "^0.7.4",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
