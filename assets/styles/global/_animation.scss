@@ -1,0 +1,10 @@
+.will-fade-in {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.has-faded-in {
+    visibility: visible;
+    opacity: 1;
+    transform: translateZ(0);
+}

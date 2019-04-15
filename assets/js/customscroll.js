@@ -1,11 +1,3 @@
-const welcome = document.querySelector('#welcome');
+const project = document.querySelector('.project');
 
-welcome.addEventListener('click', () => {
-    console.log('sanity');
-    anime({
-        targets: welcome,
-        rotateX: 180,
-        duration: 3000
-      });
-});
-
+project.classList.add('fadeIn');

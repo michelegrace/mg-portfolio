@@ -27,7 +27,9 @@ h1 {
     letter-spacing: 0.2px;
     color: $pink;
     &.mega {
-        font-size: 8.375em;;
+        font-size: 6.375em;
+        max-width: 65%;
+        margin: 0 auto;
     }
 }
 
@@ -39,10 +41,9 @@ h2, .h2 {
 
 h3, .h3{
     font-size: 1.375rem;
-    font-weight: bold;
-    line-height: 1.95;
-    letter-spacing: 1.1px;
-    color: $offwhite;
+    font-family: $display;
+    color: $pink;
+    line-height: normal;
 }
 
 .skills {

@@ -43,7 +43,7 @@ function css(){
 
 function js(){
   return gulp
-  .src('./assets/js/*.js')
+  .src(['./assets/js/*.js'])
   .pipe(plumber())
   .pipe(concat('all.js'))
   .pipe(sourcemaps.write())

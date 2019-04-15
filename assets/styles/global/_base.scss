@@ -21,8 +21,16 @@ header {
     position: relative;
 }
 
+// .is-align-items-center {
+//     align-items: center;
+// }
+
+.center-element {
+    margin: 0 auto;
+}
+
 .section-padding {
-    padding: 50px 0;
+    padding: 180px 0;
 }
 
 .center-block-content {
@@ -39,8 +47,8 @@ header {
 .tags {
     li {
         display: inline-block;
-        padding: 0 4px;
-        font-size: 0.875rem;
+        padding: 0 10px;
+        font-size: 0.75rem;
         color: $neon;
         &:first-of-type {
             padding-left: 0;
@@ -48,5 +56,18 @@ header {
         &:last-of-type {
             padding-right: 0;
         }
+    }
+}
+
+.btn-group {
+    padding-left: 20px;
+}
+
+.external-link {
+    &:focus, &:hover {
+        i {
+            color: $offwhite;
+        }
+        
     }
 }
