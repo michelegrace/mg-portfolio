@@ -28,3 +28,19 @@
     background-position: right;
     background-blend-mode: multiply;
 }
+
+.experience {
+    background: $dk-three;
+    padding: 25px;
+}
+
+.work-history {
+    .employment-tab {
+        visibility: hidden;
+        opacity: 0;
+        &.active-tab {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
