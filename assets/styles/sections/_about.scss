@@ -1,14 +1,12 @@
 .about {
     position: relative;
     padding: 75px 0;
-    .about-cntnt {
-        position: absolute;
-        left: 30%;
-        padding: 7% 0 0;
-    }
 }
 
 .about-cntnt {
+    position: absolute;
+    left: 30%;
+    padding: 7% 0 0;
     p {
         padding: 0 0 0 40px;
         font-size: 1rem;
@@ -41,6 +39,20 @@
         &.active-tab {
             visibility: visible;
             opacity: 1;
+        }
+    }
+}
+
+#contact {
+    text-align: center;
+}
+
+.social {
+    li {
+        display:inline-block;
+        padding: 0 1.5rem;
+        a {
+            font-size: 4rem;
         }
     }
 }
