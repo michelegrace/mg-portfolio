@@ -5,8 +5,18 @@ html {
 body {
     font-family: $body;
     position: relative;
-    background: $d-indigo;
+    background: $dk-two;
     color: $offwhite;
+}
+
+
+main {
+    &.body-hidden {
+        display: none;
+    }
+    &.body-visible {
+        display: block;
+    }
 }
 
 header {
@@ -40,11 +50,18 @@ header {
     }
 }
 
+.pink-link {
+    color: $pink;
+    &:focus, &:hover {
+        color: lighten($pink, 10%);
+    }
+}
+
 .tags {
     li {
         display: inline-block;
         padding: 0 10px;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         color: $neon;
         &:first-of-type {
             padding-left: 0;
@@ -70,6 +87,7 @@ header {
 
 #loading {
     height:100vh;
+    overflow: hidden;
     width: 100%;
     position: absolute;
     top: 0;

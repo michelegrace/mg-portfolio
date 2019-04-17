@@ -6,7 +6,7 @@
     left: 58px;
     transform: rotate(-7deg);
     letter-spacing:0.02em;
-    opacity: 0;
+    opacity: 1;
     span {
         display: block;
         line-height: 1.1em;
@@ -42,6 +42,10 @@ h3, .h3{
     line-height: normal;
 }
 
+a {
+    cursor: pointer!important;
+}
+
 .skills {
     li {
         color: $offwhite;
@@ -55,3 +59,4 @@ h3, .h3{
   text-align: center;
   color: $offwhite;
 }
+

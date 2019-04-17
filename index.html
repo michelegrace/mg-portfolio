@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="public/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Michele Grace Smolensky | Designer & Web Developer</title>
 </head>
 
 <body>
-    <div id="loading" class="loading">
+    <!-- <div id="loading" class="loading">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200">
             <circle r="60" cy="97" cx="497" stroke-width="1" stroke="#F433AB" fill="transparent" />
             <path></path>
@@ -22,12 +23,12 @@
         <div class="logo preloader-logo">
             <span class="firstname pink-stroke">ms</span>
         </div>
-    </div>
-    <main class="body-visible">
+    </div> -->
+    <main class="body-visible"> <!-- body-hidden-->
         <header class="is-absolute">
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="logo loading-in" href="/">
+                    <a class="logo fadeInElem" href="/">
                         <span class="firstname">michele</span>
                         <span class="lastname">smolensky</span>
                     </a>
@@ -51,26 +52,21 @@
         <section id="welcome" class="columns is-gapless is-relative is-marginless">
             <div class="column">
                 <div class="design block">
-                    <div class="center-block-content">
-                        <span class="is-uppercase intro-text txt-design">Design</span>
-                    </div>
                 </div>
             </div>
             <div class="column">
                 <div class="dev block">
-                    <div class="center-block-content">
-                        <span class="is-uppercase intro-text txt-dev">Development</span>
-                    </div>
                 </div>
             </div>
-            <div class="middle-content">
+            <div class="welcome__intro">
                 <h1 class="mega">get you a girl who can do both</h1>
+                <span class="is-uppercase intro-text">Design & Development</span>
             </div>
         </section>
         <section id="work" class="section-padding">
             <div class="container">
 
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
                     <div class="columns">
                         <div class="column">
                             <figure class="image">
@@ -116,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
                     <div class="columns">
                         <div class="column">
                             <figure class="image">
@@ -156,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
                     <div class="columns">
                         <div class="column">
                             <figure class="image">
@@ -201,7 +197,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
                     <div class="columns">
                         <div class="column">
                             <figure class="image">
@@ -243,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
                     <div class="columns">
                         <div class="column">
                             <figure class="image">
@@ -290,7 +286,7 @@
         </section>
 
         <section id="about" class="about columns section-padding">
-            <div class="column is-two-fifths is-gapless">
+            <div class="column is-two-fifths is-gapless" data-aos="fade-right" data-aos-easing="linear" data-aos-offset="300">
                 <div class="portrait"></div>
             </div>
             <div class="column is-three-fifths about-cntnt">
@@ -311,7 +307,7 @@
                                 new, exciting projects. Feel free to get in touch!</p>
                         </div>
                         <div class="employment">
-                            <ul class="employer--list">
+                            <ul class="employer--list column is-one-fifth">
                                 <li class="employer__list--item"><a class="active" href="#pc">Practice Cafe</a></li>
                                 <li class="employer__list--item"><a href="#tbn">The Biggest Nerd</a></li>
                                 <li class="employer__list--item"><a href="#il">inLeague</a></li>
@@ -323,51 +319,70 @@
                                     <span class="workHistory__detail--term">2015 - Current</span>
                                     <ul class="workHistory__detail--list">
                                         <li>Trained and managed a team of two designers.</li>
+                                        <li>Ran workshops in-house to help educate other teams about the basics of web development and hosting.</li>
                                         <li>Worked daily with the digital marketing team to create and optimize landers for various campaigns.</li>
                                         <li>Designed full websites, landers, and one-off social media posts for clients and internal use.</li>
                                         <li>Built performant and maintainable wordpress sites for various practices all over the U.S. and Canada.</li>
                                         <li>Maintained and debugged existing sites for clients on a variety of platforms and content management systems, such as Drupal and MODX.</li>
                                     </ul>
                                 </div>
+                                <div id="tbn" class="hidden-tab workHistory__detail">
+                                        <h4>Designer & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.thebiggestnerd.com" target="_blank">The Biggest Nerd</a></h4>
+                                        <span class="workHistory__detail--term">2018 - Current</span>
+                                        <p><i>The Biggest Nerd is a subcompany of Practice Cafe, where we offer development services to businesses without in-house teams.</i></p>
+                                        <ul class="workHistory__detail--list">
+                                            <li>Designed and developed custom themes for a variety of businesses, including Asure Software.</li>
+                                            <li>Maintained and made content and design updates to e-commerce sites, such as Tushy.</li>
+                                            <li>Collaborated with project managers and fellow developers to help guide projects, establish standards and ensure clients get the best product possible.</li>
+                                        </ul>
+                                    </div>
                                 <div id="il" class="hidden-tab workHistory__detail">
                                     <h4>Designer & Frontend Developer</h4>
-                                    <span class="workHistory__detail--term">June 2015 - Current</span>
-                                    <p></p>
+                                    <span class="workHistory__detail--term">2015 - 2018</span>
                                     <ul class="workHistory__detail--list">
-                                        <li>Example</li>
+                                        <li>Designed and coded a flexible, custom theme for a youth soccer regional league using the content management system Mura.</li>
+                                        <li>Redesigned and delivered frontend code for the updated youth soccer league management web application.</li>
+                                        <li>Designed and helped build out the mobile app version using PhoneGap.</li>
                                     </ul>
                                 </div>
                                 <div id="fr" class="hidden-tab workHistory__detail">
-                                    <h4>Design Manager and Frontend Developer</h4>
+                                    <h4>Frontend Developer</h4>
                                     <span class="workHistory__detail--term">June 2015 - Current</span>
                                     <ul class="workHistory__detail--list">
-                                        <li>Example</li>
+                                        <li>Worked closely with a variety of clients one-on-one to design and build websites within budget and time constraints.</li>
+                                        <li>Collaborated with freelance designers to help build preformant and dynamic themes for clients.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <a href="/resume" class="text-right">Download Resume</a>
+                        <div class="column has-text-right">
+                                <a href="/resume" class="has-text-right pink-link">Download Resume</a>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact" class="columns section-padding">
-            <div class="column">
-                <h1>Drop me a line!</h1>
+        <section id="contact" class="columns section-padding contact__section has-text-centered">
+                <div class="column">
+                        <h1 class="contact__section--heading">Drop me a line!</h1>
 
-                <ul>
-                    <li><a href=""><i class="fab fa-github"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-            </div>
+                        <ul class="contact__section--social">
+                            <li><a target="_blank" href="https://github.com/michelegrace"><i class="fab fa-github"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/waywarddesigner"><i class="fab fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/mgrace00"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                </div>
+                <div class="column">
+                    <footer>2019 Michele Smolensky / <a href="mailto:michele.smolensky@gmail.com">michele.smolensky@gmail.com</a></footer>
+                </div>
+            
         </section>
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="public/third_party/anime.min.js"></script>
     <script src="public/js/all.js"></script>
