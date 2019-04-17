@@ -29,19 +29,17 @@ const project = document.querySelector('.project');
 
 project.classList.add('fadeIn');
 //run loader
+var interval = setInterval(() => {
+    if (document.readyState === 'complete') {
+        var preloader = document.getElementById('loading');
+        var docLoad = document.querySelector('main');
+        preloader.classList.remove('loading');
+        preloader.classList.add('loaded');
+        docLoad.classList.add('body-visible');
 
-
-// var interval = setInterval(() => {
-//     if (document.readyState === 'complete') {
-//         var preloader = document.getElementById('loading');
-//         var docLoad = document.querySelector('main');
-//         preloader.classList.remove('loading');
-//         preloader.classList.add('loaded');
-//         docLoad.classList.add('body-visible');
-
-//         clearInterval(interval);
-//     }
-// }, 4977);
+        clearInterval(interval);
+    }
+}, 4977);
 
 //load welcome section elements
 
@@ -55,3 +53,4 @@ if(docLoad.classList == 'body-visible'){
     })
 }
 // hide non-active employment tabs
+

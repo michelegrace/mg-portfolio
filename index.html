@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- <div id="loading" class="loading">
+    <div id="loading" class="loading">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200">
             <circle r="60" cy="97" cx="497" stroke-width="1" stroke="#F433AB" fill="transparent" />
             <path></path>
@@ -22,7 +22,7 @@
         <div class="logo preloader-logo">
             <span class="firstname pink-stroke">ms</span>
         </div>
-    </div> -->
+    </div>
     <main class="body-visible">
         <header class="is-absolute">
             <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -289,57 +289,58 @@
             </div>
         </section>
 
-        <section id="about" class="columns section-padding">
+        <section id="about" class="about columns section-padding">
             <div class="column is-two-fifths is-gapless">
                 <div class="portrait"></div>
             </div>
             <div class="column is-three-fifths about-cntnt">
                 <div class="columns">
                     <div class="column is-three-thirds">
-                        <div class="about">
+                        <div class="about-paragraph">
                             <h2>hello!</h2>
-                            <p class="about-intro">My name is Michele Smolensky and I <span id="message"></span>.</p>
                             <p>As both a designer and developer, I love that I have the tools to solve problems and
                                 implement solutions. I believe that products can be simple, but they don't have to be
                                 boring.</p>
                             <p>I'm always on the hunt for what's new and changing in the world of design and code. The
-                                plethora of things to
-                                learn and deep dive into is part of what drew me to tech in the first place. Currently,
-                                I am learning React, experimenting
-                                with Adobe XD and prototyping an app for foodies. I blog about what I'm learning and
-                                doing here.</p>
-                            <p>When I'm not glued to a screen I like practicing aerial arts, eating good food, and
+                                plethora of things to learn and deep dive into is part of what drew me to tech in the 
+                                first place. Currently, I am learning React, experimenting with Adobe XD and prototyping 
+                                an app for foodies.</p>
+                            <p>When I'm not glued to a screen I like practicing aerial arts, eating good food, and 
                                 rolling for initiative. </p>
-
-                            <p>I am currently available for freelance work and I'm always interested in participating in
-                                new, exciting projects.
-                                Feel free to get in touch.</p>
+                            <p>I am currently available for freelance work and I'm always interested in participating in 
+                                new, exciting projects. Feel free to get in touch!</p>
                         </div>
-                        <div class="experience">
-                            <ul class="employment-list">
-                                <li><a class="active" href="#pc">Practice Cafe/The Biggest Nerd</a></li>
-                                <li><a href="#il">inLeague</a></li>
-                                <li><a href="#fr">Freelance</a></li>
+                        <div class="employment">
+                            <ul class="employer--list">
+                                <li class="employer__list--item"><a class="active" href="#pc">Practice Cafe</a></li>
+                                <li class="employer__list--item"><a href="#tbn">The Biggest Nerd</a></li>
+                                <li class="employer__list--item"><a href="#il">inLeague</a></li>
+                                <li class="employer__list--item"><a href="#fr">Freelance</a></li>
                             </ul>
-                            <div class="work-history">
-                                <div id="pc" class="active-tab employment-tab">
-                                    <h4>Design Manager and Frontend Developer</h4>
-                                    <span class="employment">June 2015 - Current</span>
-                                    <ul class="employment-responsibilities">
+                            <div class="workHistory">
+                                <div id="pc" class="active-tab workHistory__detail">
+                                    <h4>Design Manager & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.practicecafe.com" target="_blank">Practice Cafe</a></h4>
+                                    <span class="workHistory__detail--term">2015 - Current</span>
+                                    <ul class="workHistory__detail--list">
+                                        <li>Trained and managed a team of two designers.</li>
+                                        <li>Worked daily with the digital marketing team to create and optimize landers for various campaigns.</li>
+                                        <li>Designed full websites, landers, and one-off social media posts for clients and internal use.</li>
+                                        <li>Built performant and maintainable wordpress sites for various practices all over the U.S. and Canada.</li>
+                                        <li>Maintained and debugged existing sites for clients on a variety of platforms and content management systems, such as Drupal and MODX.</li>
+                                    </ul>
+                                </div>
+                                <div id="il" class="hidden-tab workHistory__detail">
+                                    <h4>Designer & Frontend Developer</h4>
+                                    <span class="workHistory__detail--term">June 2015 - Current</span>
+                                    <p></p>
+                                    <ul class="workHistory__detail--list">
                                         <li>Example</li>
                                     </ul>
                                 </div>
-                                <div id="il" class="experience-tab">
+                                <div id="fr" class="hidden-tab workHistory__detail">
                                     <h4>Design Manager and Frontend Developer</h4>
-                                    <span class="employment">June 2015 - Current</span>
-                                    <ul class="employment-responsibilities">
-                                        <li>Example</li>
-                                    </ul>
-                                </div>
-                                <div id="fr" class="experience-tab">
-                                    <h4>Design Manager and Frontend Developer</h4>
-                                    <span class="employment">June 2015 - Current</span>
-                                    <ul class="employment-responsibilities">
+                                    <span class="workHistory__detail--term">June 2015 - Current</span>
+                                    <ul class="workHistory__detail--list">
                                         <li>Example</li>
                                     </ul>
                                 </div>

@@ -21,10 +21,6 @@ header {
     position: relative;
 }
 
-// .is-align-items-center {
-//     align-items: center;
-// }
-
 .center-element {
     margin: 0 auto;
 }
@@ -98,6 +94,7 @@ header {
     position: absolute;
     display: block;
     transform: translate(-50%,-50%) rotate(-10deg);
+    opacity: 1;
 }
 
 svg {

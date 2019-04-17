@@ -1,16 +1,17 @@
 .about {
     position: relative;
     padding: 75px 0;
-    .about-cntnt {
-        position: absolute;
-        left: 30%;
-        padding: 7% 0 0;
-    }
 }
 
 .about-cntnt {
+    position: absolute;
+    left: 30%;
+    padding: 7% 0 0;
+}
+
+.about-paragraph {
+    margin-bottom: 60px;
     p {
-        padding: 0 0 0 40px;
         font-size: 1rem;
         line-height: 1.75em;
         letter-spacing: 0.01em;
@@ -29,18 +30,86 @@
     background-blend-mode: multiply;
 }
 
-.experience {
+.employment {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 40px;
+}
+
+.employer--list {
+    padding-right: 40px;
+}
+
+.employer__list--item {
+    position: relative;
+    & > a {
+        opacity: .5;
+        font-size: 0.8rem;
+        padding: 10px 5px;
+        color: $offwhite;
+        transition: .3s opacity ease-in;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        
+        &:after {
+            content: '';
+            height: 1px;
+            width: 0;
+            position: absolute;
+            left: 100%;
+            display: block;
+            background: rgba($offwhite, .3);
+            transition: .7s width ease-in;
+        }
+        &.active, &:focus, &:hover {
+            opacity: 1;
+            color: $neon;
+        }
+        &.active {
+            &:after {
+                width: 55px;
+                background: $neon;
+            }
+        }
+    }
+}
+
+.workHistory {
     background: $dk-three;
     padding: 25px;
 }
 
-.work-history {
-    .employment-tab {
+.workHistory__detail {
+    &.hidden-tab {
         visibility: hidden;
         opacity: 0;
-        &.active-tab {
-            visibility: visible;
-            opacity: 1;
-        }
+        height: 0;
+    }
+    &.active-tab {
+        visibility: visible;
+        opacity: 1;
+    }
+    h4 {
+        font-weight: 600;
+    }
+}
+
+.workHistory__detail--employer {
+    color: $neon;
+    &:focus, &:hover {
+        color: $dk-blue;
+    }
+}
+
+.workHistory__detail--term {
+    padding-top: .25rem;
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.workHistory__detail--list {
+    li {
+        font-size: 0.875rem;
     }
 }
