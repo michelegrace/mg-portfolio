@@ -1,14 +1,15 @@
 .about {
     padding: 0;
+    position: relative;
 }
 
-.about-cntnt {
+.about__content {
     position: relative;
     left: -10%;
     padding: 7% 0 0;
 }
 
-.about-paragraph {
+.about__content--paragraph {
     margin-bottom: 60px;
     p {
         font-size: 1rem;
@@ -19,7 +20,7 @@
     }
 }
 
-.portrait {
+.about__portrait--img {
     background: url(../images/option-3.jpg)no-repeat, linear-gradient(23deg, $dk-blue, $ultramarine);
     display: block;
     width: 100%;
@@ -63,8 +64,7 @@
         &.active, &:focus, &:hover {
             opacity: 1;
             color: $pink;
-        }
-        &.active {
+            background: transparent;
             &:after {
                 width: 55px;
                 background: $pink;
@@ -79,17 +79,21 @@
 }
 
 .workHistory__detail {
-    &.hidden-tab {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-    }
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all 0.1s cubic-bezier(0.63, 0.38, 0.33, 0.78);
     &.active-tab {
         visibility: visible;
         opacity: 1;
+        height: initial;
     }
     h4 {
         font-weight: 600;
+    }
+    p {
+        margin-bottom: 2rem;
+        font-size: .8rem;
     }
 }
 
@@ -121,7 +125,7 @@
 
 .contact__section--heading {
     font-size: 4.00rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .contact__section--social {

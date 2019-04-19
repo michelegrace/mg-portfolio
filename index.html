@@ -33,13 +33,12 @@
                         <span class="lastname">smolensky</span>
                     </a>
                 </div>
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbar">
+                <a role="button" class="navbar-burger burger" aria-label="menu" data-target="navbar">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
-                <div class="navbar-menu">
+                <div id="mainNav" class="navbar-menu">
                     <div class="navbar-end">
                         <a href="#work" class="navbar-item">Work</a>
                         <a href="#about" class="navbar-item">About</a>
@@ -49,7 +48,7 @@
                 </div>
             </nav>
         </header>
-        <section id="welcome" class="columns is-gapless is-relative is-marginless">
+        <section id="welcome" class="columns is-gapless is-relative is-marginless is-mobile">
             <div class="column">
                 <div class="design block">
                 </div>
@@ -77,7 +76,7 @@
                             <div class="project__meta">
                                 <div class="project__meta--basic">
                                     <span class="project__meta--company">
-                                        <h3>Southwest Review</h3>
+                                        <h3>swr</h3>
                                         <div class="btn-group">
                                             <a class="external-link" target="_blank"
                                                 href="https://bitbucket.org/mgrace89/swr-site-build/src/master/">
@@ -96,7 +95,7 @@
                                 </div>
                             </div>
 
-                            <p>A custom wordpress theme for South West Review, the third longest-running
+                            <p>A custom wordpress theme for Southwest Review, the third longest-running
                                 literary quarterly in the United States.
                             </p>
                             <hr>
@@ -250,7 +249,7 @@
                             <div class="project__meta">
                                 <div class="project__meta--basic">
                                     <span class="project__meta--company">
-                                        <h3>Sharp Family Dentistry</h3>
+                                        <h3>Sharp Family</h3>
                                         <div class="btn-group">
                                             <a class="external-link" disabled
                                                 href="https://bitbucket.org/mgrace89/swr-site-build/src/master/">
@@ -286,78 +285,77 @@
         </section>
 
         <section id="about" class="about columns section-padding">
-            <div class="column is-two-fifths is-gapless" data-aos="fade-right" data-aos-easing="linear" data-aos-offset="300">
-                <div class="portrait"></div>
+            <div class="column is-two-fifths is-gapless about__portrait" data-aos="fade-right" data-aos-easing="linear" data-aos-offset="300">
+                <div class="about__portrait--img"></div>
             </div>
-            <div class="column is-three-fifths about-cntnt">
-                <div class="columns">
-                    <div class="column is-three-thirds">
-                        <div class="about-paragraph">
-                            <h2>hello!</h2>
-                            <p>As both a designer and developer, I love that I have the tools to solve problems and
-                                implement solutions. I believe that products can be simple, but they don't have to be
-                                boring.</p>
-                            <p>I'm always on the hunt for what's new and changing in the world of design and code. The
-                                plethora of things to learn and deep dive into is part of what drew me to tech in the 
-                                first place. Currently, I am learning React, experimenting with Adobe XD and prototyping 
-                                an app for foodies.</p>
-                            <p>When I'm not glued to a screen I like practicing aerial arts, eating good food, and 
-                                rolling for initiative. </p>
-                            <p>I am currently available for freelance work and I'm always interested in participating in 
-                                new, exciting projects. Feel free to get in touch!</p>
-                        </div>
-                        <div class="employment">
-                            <ul class="employer--list column is-one-fifth">
-                                <li class="employer__list--item"><a class="active" href="#pc">Practice Cafe</a></li>
-                                <li class="employer__list--item"><a href="#tbn">The Biggest Nerd</a></li>
-                                <li class="employer__list--item"><a href="#il">inLeague</a></li>
-                                <li class="employer__list--item"><a href="#fr">Freelance</a></li>
-                            </ul>
-                            <div class="workHistory">
-                                <div id="pc" class="active-tab workHistory__detail">
-                                    <h4>Design Manager & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.practicecafe.com" target="_blank">Practice Cafe</a></h4>
-                                    <span class="workHistory__detail--term">2015 - Current</span>
+            <div class="column is-three-fifths about__content">
+                <div class="columns flex-direction-col">
+                    <div class="about__content--paragraph">
+                        <h2>hello!</h2>
+                        <p>As both a designer and developer, I love that I have the tools to solve problems and
+                            implement solutions. I believe that products can be simple, but they don't have to be
+                            boring.</p>
+                        <p>I'm always on the hunt for what's new and changing in the world of design and code. The
+                            plethora of things to learn and deep dive into is part of what drew me to tech in the 
+                            first place. Currently, I am learning React, experimenting with Adobe XD and prototyping 
+                            an app for foodies.</p>
+                        <p>When I'm not glued to a screen I like practicing aerial arts, eating good food, and 
+                            rolling for initiative. </p>
+                        <p>I am currently available for freelance work and I'm always interested in participating in 
+                            new, exciting projects. Feel free to get in touch!</p>
+                    </div>
+                    <div class="employment">
+                        <ul class="employer--list column is-one-fifth">
+                            <li class="employer__list--item"><a class="active" href="#pc">Practice Cafe</a></li>
+                            <li class="employer__list--item"><a href="#tbn">The Biggest Nerd</a></li>
+                            <li class="employer__list--item"><a href="#il">inLeague</a></li>
+                            <li class="employer__list--item"><a href="#fr">Freelance</a></li>
+                        </ul>
+                        <div class="workHistory">
+                            <div id="pc" class="workHistory__detail active-tab">
+                                <h4>Design Manager & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.practicecafe.com" target="_blank">Practice Cafe</a></h4>
+                                <span class="workHistory__detail--term">2015 - Current</span>
+                                <ul class="workHistory__detail--list">
+                                    <li>Trained and managed a team of two designers.</li>
+                                    <li>Organized and ran lightning talks for the web team.</li>
+                                    <li>Ran workshops in-house to help educate other teams about the basics of the web.</li>
+                                    <li>Worked daily with the digital marketing team to create and optimize landers for various campaigns.</li>
+                                    <li>Designed full websites, landers, and one-off social media posts for clients and internal use.</li>
+                                    <li>Built performant and maintainable wordpress sites for various practices all over the U.S. and Canada.</li>
+                                    <li>Maintained and debugged existing sites for clients on a variety of platforms and content management systems, such as Drupal and MODX.</li>
+                                </ul>
+                            </div>
+                            <div id="tbn" class="workHistory__detail">
+                                    <h4>Designer & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.thebiggestnerd.com" target="_blank">The Biggest Nerd</a></h4>
+                                    <span class="workHistory__detail--term">2018 - Current</span>
+                                    <p><i>The Biggest Nerd is a subcompany of Practice Cafe, that offers development services to businesses without in-house teams.</i></p>
                                     <ul class="workHistory__detail--list">
-                                        <li>Trained and managed a team of two designers.</li>
-                                        <li>Ran workshops in-house to help educate other teams about the basics of web development and hosting.</li>
-                                        <li>Worked daily with the digital marketing team to create and optimize landers for various campaigns.</li>
-                                        <li>Designed full websites, landers, and one-off social media posts for clients and internal use.</li>
-                                        <li>Built performant and maintainable wordpress sites for various practices all over the U.S. and Canada.</li>
-                                        <li>Maintained and debugged existing sites for clients on a variety of platforms and content management systems, such as Drupal and MODX.</li>
+                                        <li>Designed and developed custom themes for a variety of businesses, including Asure Software.</li>
+                                        <li>Maintained and made content and design updates to e-commerce sites, such as Tushy.</li>
+                                        <li>Collaborated with project managers and fellow developers to help guide projects, establish standards and ensure clients get the best product possible.</li>
                                     </ul>
                                 </div>
-                                <div id="tbn" class="hidden-tab workHistory__detail">
-                                        <h4>Designer & Frontend Developer / <a class="workHistory__detail--employer" href="https://www.thebiggestnerd.com" target="_blank">The Biggest Nerd</a></h4>
-                                        <span class="workHistory__detail--term">2018 - Current</span>
-                                        <p><i>The Biggest Nerd is a subcompany of Practice Cafe, where we offer development services to businesses without in-house teams.</i></p>
-                                        <ul class="workHistory__detail--list">
-                                            <li>Designed and developed custom themes for a variety of businesses, including Asure Software.</li>
-                                            <li>Maintained and made content and design updates to e-commerce sites, such as Tushy.</li>
-                                            <li>Collaborated with project managers and fellow developers to help guide projects, establish standards and ensure clients get the best product possible.</li>
-                                        </ul>
-                                    </div>
-                                <div id="il" class="hidden-tab workHistory__detail">
-                                    <h4>Designer & Frontend Developer</h4>
-                                    <span class="workHistory__detail--term">2015 - 2018</span>
-                                    <ul class="workHistory__detail--list">
-                                        <li>Designed and coded a flexible, custom theme for a youth soccer regional league using the content management system Mura.</li>
-                                        <li>Redesigned and delivered frontend code for the updated youth soccer league management web application.</li>
-                                        <li>Designed and helped build out the mobile app version using PhoneGap.</li>
-                                    </ul>
-                                </div>
-                                <div id="fr" class="hidden-tab workHistory__detail">
-                                    <h4>Frontend Developer</h4>
-                                    <span class="workHistory__detail--term">June 2015 - Current</span>
-                                    <ul class="workHistory__detail--list">
-                                        <li>Worked closely with a variety of clients one-on-one to design and build websites within budget and time constraints.</li>
-                                        <li>Collaborated with freelance designers to help build preformant and dynamic themes for clients.</li>
-                                    </ul>
-                                </div>
+                            <div id="il" class="workHistory__detail">
+                                <h4>Designer & Frontend Developer / <a class="workHistory__detail--employer" href="http://www.inleague.org" target="_blank">inLeague</a></h4>
+                                <span class="workHistory__detail--term">2015 - 2018</span>
+                                <ul class="workHistory__detail--list">
+                                    <li>Designed and coded a flexible, custom theme for a youth soccer regional league using the content management system Mura.</li>
+                                    <li>Redesigned and delivered frontend code for the updated youth soccer league management web application.</li>
+                                    <li>Designed and helped build out the mobile app version using PhoneGap.</li>
+                                </ul>
+                            </div>
+                            <div id="fr" class="workHistory__detail">
+                                <h4>Frontend Developer</h4>
+                                <span class="workHistory__detail--term">June 2015 - Current</span>
+                                <ul class="workHistory__detail--list">
+                                    <li>Worked closely with a variety of clients one-on-one to design and build websites within budget and time constraints.</li>
+                                    <li>Collaborated with freelance designers to help build preformant and dynamic themes for clients.</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="column has-text-right">
-                                <a href="/resume" class="has-text-right pink-link">Download Resume</a>
-                            </div>
+                    </div>
+                    <div class="column has-text-right">
+                        <a href="/resume" class="has-text-right pink-link">Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -372,17 +370,13 @@
                             <li><a target="_blank" href="https://www.linkedin.com/in/mgrace00"><i class="fab fa-linkedin-in"></i></a></li>
                         </ul>
                 </div>
-                <div class="column">
-                    <footer>2019 Michele Smolensky / <a href="mailto:michele.smolensky@gmail.com">michele.smolensky@gmail.com</a></footer>
-                </div>
-            
         </section>
+        <footer class="has-text-centered"><i class="far fa-copyright"></i> 2019 Michele Smolensky / <a href="mailto:michele.smolensky@gmail.com">michele.smolensky@gmail.com</a></footer>
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="public/third_party/anime.min.js"></script>
     <script src="public/js/all.js"></script>

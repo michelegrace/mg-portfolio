@@ -39,6 +39,10 @@ header {
     padding: 180px 0;
 }
 
+.flex-direction-col {
+    flex-direction: column;
+}
+
 .center-block-content {
     height: 100%;
     display: flex;

@@ -24,8 +24,8 @@ h1 {
     color: $pink;
     &.mega {
         font-size: 6.375em;
-        max-width: 65%;
-        margin: 0 auto;
+        max-width: 80%;
+        margin: 0 auto 1rem;
     }
 }
 
@@ -58,5 +58,15 @@ a {
   letter-spacing: 0.09em;
   text-align: center;
   color: $offwhite;
+}
+
+footer {
+    font-size: .8rem;
+    a {
+        color: $pink;
+        &:focus, &:hover {
+            color: $neon;
+        }
+    }
 }
 
