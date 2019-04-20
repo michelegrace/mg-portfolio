@@ -5,8 +5,18 @@ html {
 body {
     font-family: $body;
     position: relative;
-    background: $d-indigo;
+    background: $dk-two;
     color: $offwhite;
+}
+
+
+main {
+    &.body-hidden {
+        display: none;
+    }
+    &.body-visible {
+        display: block;
+    }
 }
 
 header {
@@ -21,16 +31,16 @@ header {
     position: relative;
 }
 
-// .is-align-items-center {
-//     align-items: center;
-// }
-
 .center-element {
     margin: 0 auto;
 }
 
 .section-padding {
     padding: 180px 0;
+}
+
+.flex-direction-col {
+    flex-direction: column;
 }
 
 .center-block-content {
@@ -44,11 +54,18 @@ header {
     }
 }
 
+.pink-link {
+    color: $pink;
+    &:focus, &:hover {
+        color: lighten($pink, 10%);
+    }
+}
+
 .tags {
     li {
         display: inline-block;
         padding: 0 10px;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         color: $neon;
         &:first-of-type {
             padding-left: 0;
@@ -71,3 +88,49 @@ header {
         
     }
 }
+
+#loading {
+    height:100vh;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: $dk;
+    z-index: 999;
+    transition: 3s all ease;
+    &.loading {
+        display: flex;
+        top: 0;
+        opacity: 1;
+    }
+    &.loaded {
+        opacity: 0;
+        top: -100%;
+    }
+}
+
+.preloader-logo {
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: block;
+    transform: translate(-50%,-50%) rotate(-10deg);
+    opacity: 1;
+}
+
+svg {
+    height:100%;
+    width:100%;
+    circle {
+        stroke-dasharray: 497;
+        stroke-dashoffset: 500;
+        animation: dash 5s linear;
+    }
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 97;
+    }
+  }

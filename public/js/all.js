@@ -1,41 +1,53 @@
-var tabItems = document.querySelectorAll('.employment-list a'); 
-
-tabItems.forEach(function(tabItem){
-    tabItem.addEventListener('click', function(){
-        tabItems.forEach(function(tabItem){
-            tabItem.classList.remove('active');
-        })
-        tabItem.classList.add('active');
-    });
-})
-
-
-// // have events happen on scroll. 
-
-// //first have projects fade in on view.
-
-
-// let scrollPosition = 0;
-// const projects = document.querySelectorAll('.project');
-
-
-// function position(){
-//     let windowY = window.scrollY;
-//     if (windowY < scrollPosition){
-//         console.log(scrollPosition);
-//         projects.forEach((project) => {
-//             project.classList.add('none');
-//         })
-        
-//     } else {
-//         projects.forEach((project) => {
-//             project.classList.add('else');
-//         })
+// //run loader
+// var loadScreen = setInterval(() => {
+//     if (document.readyState === 'complete') {
+//         var preloader = document.getElementById('loading');
+//         var docLoad = document.querySelector('main');
+//         var headerLogo = document.querySelector('header .logo');
+//         docLoad.classList.remove('body-hidden');
+//         docLoad.classList.add('body-visible');
+//         preloader.classList.remove('loading');
+//         preloader.classList.add('loaded');
+//         headerLogo.classList.add('fadeInElem');
+//         clearInterval(loadScreen);
 //     }
-//     scrollPosition = windowY;
-// }
-// console.log(window.scrollY);
-// window.addEventListener('scroll', position);
-// const project = document.querySelector('.project');
+// }, 4977);
+window.addEventListener("load", function(){
+  const employers = document.querySelectorAll(".employer--list a");
 
-// project.classList.add('fadeIn');
+  const navBtn = document.querySelector('.navbar-burger');
+  const mobileMenu = document.querySelector('#mainNav');
+  navBtn.addEventListener('click', function(){
+    let expandMenu = navBtn.classList.toggle('is-active');
+
+    if(expandMenu){
+      mobileMenu.classList.add('is-active');
+    } else {
+      mobileMenu.classList.remove('is-active');
+    }
+  });
+  
+  
+  function tabClicks(tabClick){
+    for (let i = 0; i < employers.length; i++){
+      employers[i].classList.remove("active");
+    }
+    let activeTab = tabClick.currentTarget;
+    activeTab.classList.add("active");
+    tabClick.preventDefault();
+    let workHistoryPane = document.querySelectorAll(".workHistory .workHistory__detail");
+
+    for(i = 0; i < workHistoryPane.length; i++){
+      workHistoryPane[i].classList.remove('active-tab');
+    }
+
+    let selectedAnchor = tabClick.currentTarget;
+    let getAnchorID = selectedAnchor.getAttribute("href");
+    let activeEmployer = document.querySelector(getAnchorID);
+    activeEmployer.classList.add("active-tab");
+  }
+
+  for(i = 0; i < employers.length; i++){
+    employers[i].addEventListener("click", tabClicks);
+  }
+  });

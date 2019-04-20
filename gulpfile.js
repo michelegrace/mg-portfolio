@@ -74,6 +74,6 @@ function imgMin() {
       .pipe(browsersync.stream());
   }
 
-exports.default = css;
+exports.default = series(css, js);
 exports.watch = gulp.parallel(css, js, sync);
 exports.build = series(imgMin, fonts, thirdParty);

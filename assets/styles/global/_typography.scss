@@ -1,6 +1,4 @@
 .logo {
-    color: transparent;
-    -webkit-text-stroke: 1px $pink;
     font-family: $display;
     font-size: 2.500em;
     position: relative;
@@ -8,15 +6,13 @@
     left: 58px;
     transform: rotate(-7deg);
     letter-spacing:0.02em;
-    transition: 1s all ease-in-out;
+    opacity: 1;
     span {
         display: block;
         line-height: 1.1em;
-    }
-    &:focus, &:hover {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $pink;
         color: transparent;
-        transition: 1s all ease-in-out;
-        -webkit-text-stroke-color: $neon;
     }
 }
 
@@ -28,8 +24,8 @@ h1 {
     color: $pink;
     &.mega {
         font-size: 6.375em;
-        max-width: 65%;
-        margin: 0 auto;
+        max-width: 80%;
+        margin: 0 auto 1rem;
     }
 }
 
@@ -46,6 +42,10 @@ h3, .h3{
     line-height: normal;
 }
 
+a {
+    cursor: pointer!important;
+}
+
 .skills {
     li {
         color: $offwhite;
@@ -59,3 +59,14 @@ h3, .h3{
   text-align: center;
   color: $offwhite;
 }
+
+footer {
+    font-size: .8rem;
+    a {
+        color: $pink;
+        &:focus, &:hover {
+            color: $neon;
+        }
+    }
+}
+

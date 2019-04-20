@@ -1,11 +1,11 @@
-#work {
-    background: $dk-two;
-}
-
 .project {
-    margin-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    &:first-of-type {
+        padding-top: 0;
+    }
     &:last-of-type {
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
     hr {
         height: 1px; 
