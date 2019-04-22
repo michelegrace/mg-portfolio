@@ -9,7 +9,6 @@ body {
     color: $offwhite;
 }
 
-
 main {
     &.body-hidden {
         display: none;
@@ -85,7 +84,6 @@ header {
         i {
             color: $offwhite;
         }
-        
     }
 }
 
@@ -134,3 +132,4 @@ svg {
       stroke-dashoffset: 97;
     }
   }
+

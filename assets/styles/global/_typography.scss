@@ -2,17 +2,27 @@
     font-family: $display;
     font-size: 2.500em;
     position: relative;
-    top: 28px;
-    left: 58px;
     transform: rotate(-7deg);
-    letter-spacing:0.02em;
-    opacity: 1;
     span {
         display: block;
+        letter-spacing:0.02em;
         line-height: 1.1em;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $pink;
         color: transparent;
+        
+    }
+}
+
+.navbar-logo {
+    top: 28px;
+    left: 58px;
+    span {
+        opacity: 0;
+        transition: .3s opacity ease;
+        &.show-logo {
+            opacity: 1;
+        }
     }
 }
 
@@ -23,6 +33,7 @@ h1 {
     letter-spacing: 0.2px;
     color: $pink;
     &.mega {
+        opacity: 0;
         font-size: 6.375em;
         max-width: 80%;
         margin: 0 auto 1rem;
@@ -53,11 +64,12 @@ a {
 }
 
 .intro-text {
+    opacity: 0;
     font-size: 1.05em;
-  font-weight: bold;
-  letter-spacing: 0.09em;
-  text-align: center;
-  color: $offwhite;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    text-align: center;
+    color: $offwhite;
 }
 
 footer {

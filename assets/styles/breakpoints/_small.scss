@@ -1,0 +1,26 @@
+@media screen and (max-width: 800px){
+    .about__portrait {
+        display: block;
+        position: absolute;
+        left: auto;
+        top: -50px;
+        width: 100%;
+    }
+    .about__portrait--img {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+    }
+    .about__content {
+        width: 85% !important;
+        margin: 0 auto;
+        left: auto;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .project__meta {
+        margin-top: 2rem;
+    }
+}
