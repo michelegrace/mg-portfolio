@@ -16,7 +16,7 @@ function preload() {
 
     var welcomeTimeLine = anime.timeline({
         easing: 'linear',
-        duration: 1000
+        duration: 500
     });
 
     welcomeTimeLine.add({
@@ -26,11 +26,11 @@ function preload() {
     }).add({
         targets: '.navbar-brand span',
         opacity: 1,
-        delay: 100
+        delay: 50
       }).add({
         targets: '.navbar-menu .navbar-item',
         opacity: 1,
-        delay: [220, anime.stagger(250)] 
+        delay: [120, anime.stagger(250)] 
       })
 }, 5000);
 };
