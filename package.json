@@ -14,7 +14,6 @@
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "braces": "^3.0.2",
     "browser-sync": "^2.26.4",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -25,8 +24,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-watch": "^5.0.1",
-    "node-sass": "^4.11.0",
-    "tar": "^4.4.8"
+    "node-sass": "^4.11.0"
   },
   "dependencies": {
     "animejs": "^3.0.1",
