@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "animejs": "^3.0.1",
-    "aos": "^2.2"
+    "aos": "~2.2"
   }
 }
