@@ -16,21 +16,25 @@ function preload() {
 
     var welcomeTimeLine = anime.timeline({
         easing: 'linear',
-        duration: 500
+         duration: 500
     });
 
     welcomeTimeLine.add({
-        targets: ['h1.mega', '.intro-text'],
+        targets: 'h1.mega',
         opacity: 1,
-        delay: anime.stagger(100)
+        delay: 100
     }).add({
-        targets: '.navbar-brand span',
+      targets: '.intro-text',
+      opacity: 1,
+      delay: 75
+    }).add({
+        targets: '.navbar-logo span',
         opacity: 1,
-        delay: 50
+        // delay: 10
       }).add({
         targets: '.navbar-menu .navbar-item',
         opacity: 1,
-        delay: [120, anime.stagger(250)] 
+        delay: [75, anime.stagger(250)] 
       })
 }, 5000);
 };
